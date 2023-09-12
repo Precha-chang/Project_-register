@@ -68,8 +68,8 @@ TEMPLATES = [
     },
 ]
 
-WSGI_APPLICATION = "register.wsgi.application"
-
+# WSGI_APPLICATION = "register.wsgi.application"
+WSGI_APPLICATION = "vercel_app.wsgi.app"
 
 # Database
 # https://docs.djangoproject.com/en/4.1/ref/settings/#databases
