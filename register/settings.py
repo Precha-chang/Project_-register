@@ -55,7 +55,7 @@ ROOT_URLCONF = "register.urls"
 TEMPLATES = [
     {
         "BACKEND": "django.template.backends.django.DjangoTemplates",
-        "DIRS": [],
+        "DIRS": ['templates'],
         "APP_DIRS": True,
         "OPTIONS": {
             "context_processors": [
@@ -68,8 +68,8 @@ TEMPLATES = [
     },
 ]
 
-# WSGI_APPLICATION = "register.wsgi.application"
-WSGI_APPLICATION = "vercel_app.wsgi.app"
+WSGI_APPLICATION = "register.wsgi.application"
+# WSGI_APPLICATION = "vercel_app.wsgi.app"
 
 # Database
 # https://docs.djangoproject.com/en/4.1/ref/settings/#databases
@@ -116,7 +116,15 @@ USE_TZ = True
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/4.1/howto/static-files/
 
-STATIC_URL = "static/"
+import os
+# SSTATIC_URL = '/static/'
+# STATICFILES_DIRS = [Path.joinpath(BASE_DIR, 'statics')]
+# # STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles_build', 'static')
+STATIC_URL = 'static/'
+
+STATICFILES_DIRS = (
+    BASE_DIR / 'statics',
+)
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/4.1/ref/settings/#default-auto-field
