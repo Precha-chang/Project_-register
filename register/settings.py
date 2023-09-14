@@ -126,11 +126,13 @@ import os
 # SSTATIC_URL = '/static/'
 # STATICFILES_DIRS = [Path.joinpath(BASE_DIR, 'statics')]
 # # STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles_build', 'static')
-STATIC_URL = 'static/'
 
-STATICFILES_DIRS = (
-    BASE_DIR / 'statics',
-)
+STATIC_URL = '/static/'
+
+STATICFILES_DIRS = [BASE_DIR / 'statics', ]
+STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles_build', 'static')
+MEDIA_URL = '/media/'
+MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/4.1/ref/settings/#default-auto-field
